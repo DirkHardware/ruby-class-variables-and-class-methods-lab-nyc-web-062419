@@ -14,8 +14,12 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    @@artists << artist
-    @@genres << genre
+    if @@artists.key?{@artist}
+      @@artists[@artist] += 1
+    else @@artists[@artists] = 0 
+      if @@genres.key?{@genre}
+        @@genres[@genre] += 1
+      else @@genres[@artists] = 0 
   end
 
   def self.count
