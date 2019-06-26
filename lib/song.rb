@@ -14,14 +14,12 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    if @@artists.key?(@artist)
-       @@artists[@artist] += 1
-    else @@artists[@artists] = 1
-    end
-    if @@genres.key?(@genre)
-         @@genres[@genre] += 1
-    else @@genres[@genre] = 1
-    end
+    if @@artists.key?{@artist}
+      @@artists[@artist] += 1
+    else @@artists[@artists] = 0
+      if @@genres.key?{@genre}
+        @@genres[@genre] += 1
+      else @@genres[@genre] = 0
   end
 
   def self.count
@@ -38,7 +36,7 @@ class Song
 
   def self.genre_count
     @@genres
-  end
+  end 
 
   def self.artist_count
     @@artists
