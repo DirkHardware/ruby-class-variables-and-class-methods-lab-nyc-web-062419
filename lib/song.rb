@@ -18,7 +18,7 @@ class Song
       @@artists[@artist] += 1
     else @@artists[@artists] = 1
     end
-    if @@genres.key?()@genre)
+    if @@genres.key?(@genre)
         @@genres[@genre] += 1
     else @@genres[@genre] = 1
     end
