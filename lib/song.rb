@@ -17,7 +17,7 @@ class Song
     if @@artists.key?{@artist}
       @@artists[@artist] += 1
     else @@artists[@artist] = 1
-    end   
+    end
   end
 
   def self.count
