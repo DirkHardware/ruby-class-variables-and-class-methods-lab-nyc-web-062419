@@ -14,7 +14,7 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    if @@artists.key?{@artist}
+    if @@artists.key?(@artist)
       @@artists[@artist] += 1
     else @@artists[@artist] = 1
     end
