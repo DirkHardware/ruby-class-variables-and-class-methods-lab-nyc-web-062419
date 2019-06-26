@@ -15,11 +15,11 @@ class Song
     @genre = genre
     @@count += 1
     if @@artists.key?(@artist)
-      @@artists[@artist] += 1
+       @@artists[@artist] += 1
     else @@artists[@artists] = 1
     end
     if @@genres.key?(@genre)
-        @@genres[@genre] += 1
+         @@genres[@genre] += 1
     else @@genres[@genre] = 1
     end
   end
